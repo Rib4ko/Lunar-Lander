@@ -1,10 +1,10 @@
 import gymnasium as gym
 from stable_baselines3 import PPO
 
-env = gym.make("LunarLander-v3", render_mode="human")
+env = gym.make("LunarLander-v3")
 
 model = PPO("MlpPolicy", env , verbose=1)
 
-model.learn(total_timesteps=100000)
+model.learn(total_timesteps=1000000)
 
 env.close()
